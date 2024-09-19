@@ -227,7 +227,16 @@ class _ProductHomePageState extends State<ProductHomePage> {
                                         Navigator.of(context).push(
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    UpdateProductPage()));
+                                                    UpdateProductPage(
+                                                        productId: product.sId!,
+                                                      productData: {
+                                                        "ProductName": product.productName,
+                                                        "ProductCode": product.productCode,
+                                                        "Img": product.img,
+                                                        "UnitPrice": product.unitPrice,
+                                                        "Qty": product.qty,
+                                                        "TotalPrice": product.totalPrice,
+                                                      },)));
                                       },
                                       icon: Icon(
                                         Icons.edit_note,
