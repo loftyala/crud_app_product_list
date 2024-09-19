@@ -265,6 +265,7 @@ class _UpdateProductPageState extends State<UpdateProductPage> {
       "UnitPrice": price.text,
       "Qty": qty.text,
       "TotalPrice": totalPrice.text,
+
     };
     var response = await http.post(uri,
         headers: {"Content-Type": "application/json"},
